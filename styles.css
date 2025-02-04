@@ -58,3 +58,39 @@ footer {
 .cta-button:hover {
     background-color: #0056b3;
 }
+/* Style for the mobile menu */
+.menu-toggle {
+    display: none;
+}
+
+#nav-list {
+    display: flex;
+    list-style-type: none;
+}
+
+#nav-list li {
+    margin: 0 15px;
+}
+
+/* Show the menu on smaller screens */
+@media (max-width: 768px) {
+    #nav-list {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: block;
+        font-size: 2em;
+    }
+
+    #nav-list.show {
+        display: block;
+    }
+
+    #nav-list li {
+        margin: 10px 0;
+    }
+}
